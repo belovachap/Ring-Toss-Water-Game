@@ -1,7 +1,9 @@
 extends Node3D
 
 const WATER_MOLECULE = preload("res://water_molecule.tscn")
+const RING = preload("res://ring.tscn")
 var water_counter = 0
+var ring_counter = 0
 
 func _ready() -> void:
 	water_spiget_on()
@@ -17,6 +19,15 @@ func _on_timer_timeout() -> void:
 		water_spiget_off()
 		
 	water_counter += 1
+	ring_counter += 1
+	
+	if ring_counter % 5 == 0:
+		var new_ring = RING.instantiate()
+		new_ring.position = %WaterFaucet.global_position
+		new_ring.position.x += randf_range(-0.2, 0.2)
+		new_ring.position.y += randf_range(-0.2, 0.2)
+		new_ring.position.z += randf_range(-0.2, 0.2)
+		%Rings.add_child(new_ring)
 	
 	for i in range(20):
 		var new_water_molecule = WATER_MOLECULE.instantiate()

@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://b3i3pxhw12qew"]
 
 [ext_resource type="Script" uid="uid://b1ouqtuo7nbut" path="res://ring_toss_water_game.gd" id="1_vi6ov"]
-[ext_resource type="PackedScene" uid="uid://cxm8l2aalgs5h" path="res://ring.tscn" id="2_mugm7"]
 [ext_resource type="PackedScene" uid="uid://32iorw134bx3" path="res://pump.tscn" id="3_h7hl2"]
+[ext_resource type="PackedScene" uid="uid://rxxydplv2k72" path="res://peg.tscn" id="4_pcka7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ho8q5"]
 size = Vector3(4.96558, 1, 1)
@@ -24,15 +24,6 @@ size = Vector3(7.89795, 1.25293, 3.18774)
 
 [node name="RingTossWaterGame" type="Node3D"]
 script = ExtResource("1_vi6ov")
-
-[node name="Ring" parent="." instance=ExtResource("2_mugm7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.98532, 0)
-
-[node name="Ring2" parent="." instance=ExtResource("2_mugm7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.46957, 3.38399, 0)
-
-[node name="Ring3" parent="." instance=ExtResource("2_mugm7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28814, 2.71562, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.724271, -0.689403, 0.0124951, 0.450728, -0.459655, 0.76522, -0.521801, 0.559859, 0.643647, -0.114954, 8.14345, 5.22176)
@@ -125,6 +116,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75987, 6.02278, 0)
 [node name="Pump" parent="." instance=ExtResource("3_h7hl2")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.05353, -2.37854, 0)
+
+[node name="Peg" parent="." instance=ExtResource("4_pcka7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.621731, -0.403147, 0)
+
+[node name="Peg2" parent="." instance=ExtResource("4_pcka7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62413, 0.525043, 0)
+
+[node name="Peg3" parent="." instance=ExtResource("4_pcka7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88013, 1.50395, 0)
+
+[node name="Rings" type="Node3D" parent="."]
+unique_name_in_owner = true
 
 [connection signal="pressed" from="Camera3D/Control/Button" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
