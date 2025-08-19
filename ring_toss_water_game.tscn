@@ -141,10 +141,10 @@ transform = Transform3D(1.19811, 0, 0, 0, 1, 0, 0, 0, 1, -2.05353, -2.37854, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.621731, -0.403147, 0)
 
 [node name="Peg2" parent="." instance=ExtResource("4_pcka7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62413, 0.525043, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563635, 0.525043, 0)
 
 [node name="Peg3" parent="." instance=ExtResource("4_pcka7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88013, 1.50395, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.68124, 1.42649, 0)
 
 [node name="Rings" type="Node3D" parent="."]
 unique_name_in_owner = true
