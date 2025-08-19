@@ -15,13 +15,13 @@ func water_spiget_off() -> void:
 	%Timer.stop()
 
 func _on_timer_timeout() -> void:
-	if water_counter >= 50:
+	if water_counter >= 30:
 		water_spiget_off()
 		
 	water_counter += 1
 	ring_counter += 1
 	
-	if ring_counter % 5 == 0:
+	if ring_counter % 3 == 0:
 		var new_ring = RING.instantiate()
 		new_ring.position = %WaterFaucet.global_position
 		new_ring.position.x += randf_range(-0.2, 0.2)
