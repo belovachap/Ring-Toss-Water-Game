@@ -1,6 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://7fpdh1cwguvr"]
-
-[ext_resource type="Script" uid="uid://c2mew1krp8hwy" path="res://water_molecule.gd" id="1_uyr1g"]
+[gd_scene load_steps=5 format=3 uid="uid://7fpdh1cwguvr"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uyr1g"]
 friction = 0.05
@@ -18,7 +16,6 @@ material = SubResource("StandardMaterial3D_uyr1g")
 [node name="WaterMolecule" type="RigidBody3D"]
 mass = 0.055
 physics_material_override = SubResource("PhysicsMaterial_uyr1g")
-script = ExtResource("1_uyr1g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)

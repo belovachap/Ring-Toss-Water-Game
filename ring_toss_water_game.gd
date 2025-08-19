@@ -13,7 +13,7 @@ func water_spiget_off() -> void:
 	%Timer.stop()
 
 func _on_timer_timeout() -> void:
-	if water_counter >= 75:
+	if water_counter >= 50:
 		water_spiget_off()
 		
 	water_counter += 1
