@@ -1,42 +1,61 @@
 [gd_scene load_steps=2 format=3 uid="uid://cxm8l2aalgs5h"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2wta4"]
-radius = 0.0577844
+radius = 0.0690901
 
 [node name="Ring" type="RigidBody3D"]
+mass = 0.1
+gravity_scale = 0.75
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
-inner_radius = 0.127
-outer_radius = 0.25
+inner_radius = 0.2
+outer_radius = 0.35
+sides = 12
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.182537, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.275779, 0, 0)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.183213, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.268276, 0, 0)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000562966, 0, -0.187379)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000562966, 0, -0.270806)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000562966, 0, 0.181974)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000562966, 0, 0.275216)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136368, 0, 0.127922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.136368, 0, 0.239158)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D6" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135692, 0, 0.127922)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135692, 0, 0.232614)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D7" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135692, 0, -0.129724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240384, 0, -0.134631)
+shape = SubResource("SphereShape3D_2wta4")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.238749, 0, 0.135279)
+shape = SubResource("SphereShape3D_2wta4")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.243818, 0, 0.125464)
 shape = SubResource("SphereShape3D_2wta4")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.130963, 0, -0.129724)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.240563, 0, -0.129724)
+shape = SubResource("SphereShape3D_2wta4")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140778, 0, -0.227873)
+shape = SubResource("SphereShape3D_2wta4")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135676, 0, -0.242596)
 shape = SubResource("SphereShape3D_2wta4")
