@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b3i3pxhw12qew"]
+[gd_scene load_steps=8 format=3 uid="uid://b3i3pxhw12qew"]
 
 [ext_resource type="Script" uid="uid://b1ouqtuo7nbut" path="res://ring_toss_water_game.gd" id="1_vi6ov"]
+[ext_resource type="PackedScene" uid="uid://cxm8l2aalgs5h" path="res://ring.tscn" id="2_mugm7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ho8q5"]
 size = Vector3(4.96558, 1, 1)
@@ -19,6 +20,9 @@ size = Vector3(1, 10.6848, 2.97961)
 
 [node name="RingTossWaterGame" type="Node3D"]
 script = ExtResource("1_vi6ov")
+
+[node name="Ring" parent="." instance=ExtResource("2_mugm7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.14769, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.724271, -0.689403, 0.0124951, 0.450728, -0.459655, 0.76522, -0.521801, 0.559859, 0.643647, -0.114954, 8.14345, 5.22176)
@@ -69,7 +73,8 @@ transform = Transform3D(0.633512, -0.749884, -0.190622, 0.465012, 0.565913, -0.6
 unique_name_in_owner = true
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
+unique_name_in_owner = true
+wait_time = 0.1
 
 [node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.75987, 6.81465, 0)
