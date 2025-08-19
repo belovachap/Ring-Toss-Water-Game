@@ -45,7 +45,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="Camera3D/Control"]
+[node name="PumpButton" type="Button" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -58,6 +58,19 @@ offset_right = 78.0
 offset_bottom = 80.0
 grow_horizontal = 0
 grow_vertical = 0
+scale = Vector2(0.5, 0.5)
+icon = ExtResource("2_pcka7")
+
+[node name="ResetButton" type="Button" parent="Camera3D/Control"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -96.0
+offset_top = 9.0
+offset_right = 78.0
+offset_bottom = 183.0
+grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 icon = ExtResource("2_pcka7")
 
@@ -136,5 +149,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.88013, 1.50395, 0)
 [node name="Rings" type="Node3D" parent="."]
 unique_name_in_owner = true
 
-[connection signal="pressed" from="Camera3D/Control/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera3D/Control/PumpButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Camera3D/Control/ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

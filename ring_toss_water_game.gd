@@ -41,3 +41,6 @@ func _on_button_pressed() -> void:
 	%Pump.on = true
 	await get_tree().create_timer(0.1).timeout
 	%Pump.on = false
+
+func _on_reset_button_pressed() -> void:
+	get_tree().reload_current_scene()
