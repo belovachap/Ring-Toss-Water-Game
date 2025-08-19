@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b3i3pxhw12qew"]
+[gd_scene load_steps=12 format=3 uid="uid://b3i3pxhw12qew"]
 
 [ext_resource type="Script" uid="uid://b1ouqtuo7nbut" path="res://ring_toss_water_game.gd" id="1_vi6ov"]
 [ext_resource type="Texture2D" uid="uid://c1y3apv6ldrcd" path="res://button.png" id="2_pcka7"]
@@ -22,6 +22,9 @@ size = Vector3(1, 10.6848, 2.97961)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_osghm"]
 size = Vector3(7.89795, 1.25293, 3.18774)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d8adi"]
+size = Vector3(5.63477, 1, 1)
 
 [node name="RingTossWaterGame" type="Node3D"]
 script = ExtResource("1_vi6ov")
@@ -96,6 +99,12 @@ shape = SubResource("BoxShape3D_pcka7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="GlassBox/glass_top"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0651855, 5.79959, -0.326782)
 shape = SubResource("BoxShape3D_osghm")
+
+[node name="glass_wedge" type="StaticBody3D" parent="GlassBox"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GlassBox/glass_wedge"]
+transform = Transform3D(0.931976, -0.362519, 0, 0.362519, 0.931976, 0, 0, 0, 1, 1.2754, -2.98413, 0)
+shape = SubResource("BoxShape3D_d8adi")
 
 [node name="WaterFaucet" type="Marker3D" parent="."]
 unique_name_in_owner = true
