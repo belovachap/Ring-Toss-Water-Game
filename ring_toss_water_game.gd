@@ -13,7 +13,7 @@ func water_spiget_off() -> void:
 	%Timer.stop()
 
 func _on_timer_timeout() -> void:
-	if water_counter >= 200:
+	if water_counter >= 75:
 		water_spiget_off()
 		
 	water_counter += 1
@@ -25,3 +25,8 @@ func _on_timer_timeout() -> void:
 		new_water_molecule.position.y += randf_range(-0.2, 0.2)
 		new_water_molecule.position.z += randf_range(-0.2, 0.2)
 		%WaterMolecules.add_child(new_water_molecule)
+
+func _on_button_pressed() -> void:
+	%Pump.on = true
+	await get_tree().create_timer(0.1).timeout
+	%Pump.on = false

@@ -10,12 +10,13 @@ bounce = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uyr1g"]
 transparency = 1
-albedo_color = Color(0.188235, 0.192157, 1, 0.2)
+albedo_color = Color(0.188235, 0.192157, 1, 0.176471)
 
 [sub_resource type="SphereMesh" id="SphereMesh_uyr1g"]
 material = SubResource("StandardMaterial3D_uyr1g")
 
 [node name="WaterMolecule" type="RigidBody3D"]
+mass = 0.055
 physics_material_override = SubResource("PhysicsMaterial_uyr1g")
 script = ExtResource("1_uyr1g")
 
