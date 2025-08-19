@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://32iorw134bx3"]
+
+[ext_resource type="Script" uid="uid://c48jqo6egks88" path="res://pump.gd" id="1_j7dg1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_66ob0"]
+
+[node name="Pump" type="Area3D"]
+script = ExtResource("1_j7dg1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_66ob0")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
