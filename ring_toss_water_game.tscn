@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b3i3pxhw12qew"]
 
 [ext_resource type="Script" uid="uid://b1ouqtuo7nbut" path="res://ring_toss_water_game.gd" id="1_vi6ov"]
-[ext_resource type="Texture2D" uid="uid://c1y3apv6ldrcd" path="res://button.png" id="2_pcka7"]
+[ext_resource type="Texture2D" uid="uid://cn3w1qmp5hquh" path="res://button.png" id="2_pcka7"]
 [ext_resource type="PackedScene" uid="uid://32iorw134bx3" path="res://pump.tscn" id="3_h7hl2"]
 [ext_resource type="PackedScene" uid="uid://rxxydplv2k72" path="res://peg.tscn" id="4_pcka7"]
 
@@ -45,34 +45,28 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PumpButton" type="Button" parent="Camera3D/Control"]
+[node name="PumpButton" type="TextureButton" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -96.0
-offset_top = -94.0
-offset_right = 78.0
-offset_bottom = 80.0
+offset_left = -82.0
+offset_top = -82.0
 grow_horizontal = 0
 grow_vertical = 0
-scale = Vector2(0.5, 0.5)
-icon = ExtResource("2_pcka7")
+texture_normal = ExtResource("2_pcka7")
 
-[node name="ResetButton" type="Button" parent="Camera3D/Control"]
+[node name="ResetButton" type="TextureButton" parent="Camera3D/Control"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -96.0
-offset_top = 9.0
-offset_right = 78.0
-offset_bottom = 183.0
+offset_left = -82.0
+offset_bottom = 82.0
 grow_horizontal = 0
-scale = Vector2(0.5, 0.5)
-icon = ExtResource("2_pcka7")
+texture_normal = ExtResource("2_pcka7")
 
 [node name="GlassBox" type="Node3D" parent="."]
 
