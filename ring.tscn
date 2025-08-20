@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxm8l2aalgs5h"]
+[gd_scene load_steps=4 format=3 uid="uid://cxm8l2aalgs5h"]
+
+[ext_resource type="Script" uid="uid://v4aynvytvbhi" path="res://ring.gd" id="1_ln3uk"]
+[ext_resource type="Material" uid="uid://xabqulp6qhik" path="res://red_ring_material.tres" id="2_jiui3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_2wta4"]
 radius = 0.0690901
@@ -6,11 +9,13 @@ radius = 0.0690901
 [node name="Ring" type="RigidBody3D"]
 mass = 0.1
 gravity_scale = 0.75
+script = ExtResource("1_ln3uk")
 
 [node name="CSGTorus3D" type="CSGTorus3D" parent="."]
 inner_radius = 0.2
 outer_radius = 0.35
 sides = 12
+material = ExtResource("2_jiui3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.275779, 0, 0)
@@ -59,3 +64,27 @@ shape = SubResource("SphereShape3D_2wta4")
 [node name="CollisionShape3D10" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135676, 0, -0.242596)
 shape = SubResource("SphereShape3D_2wta4")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.0257978, 0.367241, 0, -2.75245, -0.00344203, 0, 0, 0, 3.15786, 0.183317, 0, 0)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="RayCast3D2" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.000670808, -0.00954919, 3.1568, -2.75245, -0.00344203, 0, 0.0257891, -0.367117, -0.0821124, -0.00481316, 0, -0.184744)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="RayCast3D3" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.0185107, -0.263507, 2.19954, -2.75245, -0.00344203, 9.18749e-11, 0.0179689, -0.255793, -2.26587, -0.127445, 0, -0.125576)
+collision_mask = 2
+hit_from_inside = true
+
+[node name="RayCast3D4" type="RayCast3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(0.0171056, -0.243505, -2.36386, -2.75245, -0.00344203, 1.8375e-10, -0.0193113, 0.274903, -2.09387, -0.12262, 0, 0.137172)
+collision_mask = 2
+hit_from_inside = true

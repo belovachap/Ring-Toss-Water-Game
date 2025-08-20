@@ -12,6 +12,7 @@ radius = 0.0639648
 size = Vector3(0.811134, 0.192993, 0.781776)
 
 [node name="Peg" type="StaticBody3D"]
+collision_layer = 3
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.126285, 0, 0, 0, 0.8, 0, 0, 0, 0.129962, 0, 0.832455, 0)
